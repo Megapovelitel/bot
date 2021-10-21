@@ -1,5 +1,11 @@
 const { Telegraf } = require("telegraf");
 require("dotenv").config();
+const express = require('express')
+
+const app = express()
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`server is started at ${process.env.PORT}`)
+})
 
 const codes = require("./codes");
 
